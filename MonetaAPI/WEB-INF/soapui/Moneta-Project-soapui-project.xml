@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="aab11a95-474d-4298-96e7-c0d5af911989" activeEnvironment="Default" name="Moneta Project" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="02f26798-7966-4223-a68e-0ef9b769f97f" wsaVersion="NONE" name="TransactionAPISoap12" type="wsdl" bindingName="{http://RPS.TransactionAPI/}TransactionAPISoap12" soapVersion="1_2" anonymous="optional" definition="http://10.28.128.200/API/TransactionAPI.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint></con:endpoints><con:operation id="4c9d27d6-c48b-4472-8c61-359aee8fc66b" isOneWay="false" action="http://RPS.TransactionAPI/BalanceInquiry" name="BalanceInquiry" bindingOperationName="BalanceInquiry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6bf8f6a5-87f2-43d7-b6e6-b6e920cfff91" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:BalanceInquiry>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:mode>?</rps:mode>\r
+      </rps:BalanceInquiry>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/BalanceInquiryRequest"/></con:call></con:operation><con:operation id="f6881c8c-3a25-4055-9e14-11561805bfcd" isOneWay="false" action="http://RPS.TransactionAPI/ExpressTransaction" name="ExpressTransaction" bindingOperationName="ExpressTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4c8d696b-cc27-42a5-993e-1199c7945064" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:ExpressTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:BatchId>?</rps:BatchId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>?</rps:TxnRecord>\r
+         <!--Optional:-->\r
+         <rps:RecordChecksum>?</rps:RecordChecksum>\r
+         <rps:TxnMode>?</rps:TxnMode>\r
+      </rps:ExpressTransaction>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/ExpressTransactionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="200bd86f-40cc-4d91-85c7-a1f20a8ea917" isOneWay="false" action="http://RPS.TransactionAPI/FetchAccountTitle" name="FetchAccountTitle" bindingOperationName="FetchAccountTitle" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="92414c3d-2fd8-4f83-9925-bad06ce97c51" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:FetchAccountTitle>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:AccountNumber>?</rps:AccountNumber>\r
+         <!--Optional:-->\r
+         <rps:BankCode>?</rps:BankCode>\r
+         <!--Optional:-->\r
+         <rps:AgentID>?</rps:AgentID>\r
+         <!--Optional:-->\r
+         <rps:Amount>?</rps:Amount>\r
+      </rps:FetchAccountTitle>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/FetchAccountTitleRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="00e3ca81-1136-472b-8bfa-fddc55e2f427" isOneWay="false" action="http://RPS.TransactionAPI/ImportTransaction" name="ImportTransaction" bindingOperationName="ImportTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc15bd1f-65db-4780-bfef-94404d8af6ef" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:ImportTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:BatchId>?</rps:BatchId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>?</rps:TxnRecord>\r
+         <!--Optional:-->\r
+         <rps:RecordChecksum>?</rps:RecordChecksum>\r
+         <!--Optional:-->\r
+         <rps:FailureReason>?</rps:FailureReason>\r
+      </rps:ImportTransaction>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/ImportTransactionRequest"/></con:call></con:operation><con:operation id="437d8c66-495c-4d8a-9ead-a5be685256c9" isOneWay="false" action="http://RPS.TransactionAPI/ListBanks" name="ListBanks" bindingOperationName="ListBanks" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9fc35dfe-acc9-47b4-a956-6acce2d6e624" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:ListBanks>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <rps:Mode>?</rps:Mode>\r
+         <!--Optional:-->\r
+         <rps:AgentID>?</rps:AgentID>\r
+      </rps:ListBanks>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/ListBanksRequest"/></con:call></con:operation><con:operation id="f1ccf73d-1739-4de7-9d9e-8215a0063f74" isOneWay="false" action="http://RPS.TransactionAPI/ProcessTransaction" name="ProcessTransaction" bindingOperationName="ProcessTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4f971d9a-50e6-441f-94e3-3b8818069c96" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:ProcessTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:BatchId>?</rps:BatchId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>?</rps:TxnRecord>\r
+         <!--Optional:-->\r
+         <rps:RecordChecksum>?</rps:RecordChecksum>\r
+      </rps:ProcessTransaction>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/ProcessTransactionRequest"/></con:call></con:operation><con:operation id="75992b7d-8318-48be-bed9-120c0cfbef38" isOneWay="false" action="http://RPS.TransactionAPI/StatusInquiry" name="StatusInquiry" bindingOperationName="StatusInquiry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="91349def-e66a-4a23-8316-ced0ab2df003" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <rps:StatusInquiry>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:AgentID>?</rps:AgentID>\r
+      </rps:StatusInquiry>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/TransactionAPISoap/StatusInquiryRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0120c078-1204-47a3-96bb-a994b8b137e9" wsaVersion="NONE" name="TransactionAPISoap" type="wsdl" bindingName="{http://RPS.TransactionAPI/}TransactionAPISoap" soapVersion="1_1" anonymous="optional" definition="http://10.28.128.200/API/TransactionAPI.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.28.128.200/API/TransactionAPI.asmx?wsdl"><con:part><con:url>http://10.28.128.200/API/TransactionAPI.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://RPS.TransactionAPI/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RPS.TransactionAPI/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RPS.TransactionAPI/">
+      <s:element name="ProcessTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BatchId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnType" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordUniqueId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnRecord" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordChecksum" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessTransactionResult" type="s:boolean"/>
+            <s:element minOccurs="0" maxOccurs="1" name="FailureReason" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExpressTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BatchId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnType" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordUniqueId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnRecord" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordChecksum" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="TxnMode" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExpressTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExpressTransactionResult" type="s:boolean"/>
+            <s:element minOccurs="0" maxOccurs="1" name="FailureReason" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatusInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordUniqueId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnType" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="AgentID" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatusInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusInquiryResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListBanks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="Mode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="AgentID" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListBanksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListBanksResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAccountTitle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="AgentID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAccountTitleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchAccountTitleResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BatchId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnType" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordUniqueId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnRecord" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordChecksum" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="FailureReason" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportTransactionResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeCompanyId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="mode" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BalanceInquiryResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ExpressTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ExpressTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="ExpressTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ExpressTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="StatusInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:StatusInquiry"/>
+  </wsdl:message>
+  <wsdl:message name="StatusInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:StatusInquiryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ListBanksSoapIn">
+    <wsdl:part name="parameters" element="tns:ListBanks"/>
+  </wsdl:message>
+  <wsdl:message name="ListBanksSoapOut">
+    <wsdl:part name="parameters" element="tns:ListBanksResponse"/>
+  </wsdl:message>
+  <wsdl:message name="FetchAccountTitleSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchAccountTitle"/>
+  </wsdl:message>
+  <wsdl:message name="FetchAccountTitleSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchAccountTitleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ImportTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="ImportTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BalanceInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:BalanceInquiry"/>
+  </wsdl:message>
+  <wsdl:message name="BalanceInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:BalanceInquiryResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="TransactionAPISoap">
+    <wsdl:operation name="ProcessTransaction">
+      <wsdl:input message="tns:ProcessTransactionSoapIn"/>
+      <wsdl:output message="tns:ProcessTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ExpressTransaction">
+      <wsdl:input message="tns:ExpressTransactionSoapIn"/>
+      <wsdl:output message="tns:ExpressTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="StatusInquiry">
+      <wsdl:input message="tns:StatusInquirySoapIn"/>
+      <wsdl:output message="tns:StatusInquirySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ListBanks">
+      <wsdl:input message="tns:ListBanksSoapIn"/>
+      <wsdl:output message="tns:ListBanksSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAccountTitle">
+      <wsdl:input message="tns:FetchAccountTitleSoapIn"/>
+      <wsdl:output message="tns:FetchAccountTitleSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTransaction">
+      <wsdl:input message="tns:ImportTransactionSoapIn"/>
+      <wsdl:output message="tns:ImportTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceInquiry">
+      <wsdl:input message="tns:BalanceInquirySoapIn"/>
+      <wsdl:output message="tns:BalanceInquirySoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransactionAPISoap" type="tns:TransactionAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ProcessTransaction">
+      <soap:operation soapAction="http://RPS.TransactionAPI/ProcessTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpressTransaction">
+      <soap:operation soapAction="http://RPS.TransactionAPI/ExpressTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusInquiry">
+      <soap:operation soapAction="http://RPS.TransactionAPI/StatusInquiry" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListBanks">
+      <soap:operation soapAction="http://RPS.TransactionAPI/ListBanks" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAccountTitle">
+      <soap:operation soapAction="http://RPS.TransactionAPI/FetchAccountTitle" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTransaction">
+      <soap:operation soapAction="http://RPS.TransactionAPI/ImportTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceInquiry">
+      <soap:operation soapAction="http://RPS.TransactionAPI/BalanceInquiry" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransactionAPISoap12" type="tns:TransactionAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ProcessTransaction">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/ProcessTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpressTransaction">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/ExpressTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusInquiry">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/StatusInquiry" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListBanks">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/ListBanks" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAccountTitle">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/FetchAccountTitle" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTransaction">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/ImportTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceInquiry">
+      <soap12:operation soapAction="http://RPS.TransactionAPI/BalanceInquiry" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionAPI">
+    <wsdl:port name="TransactionAPISoap" binding="tns:TransactionAPISoap">
+      <soap:address location="http://10.28.128.200/API/TransactionAPI.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="TransactionAPISoap12" binding="tns:TransactionAPISoap12">
+      <soap12:address location="http://10.28.128.200/API/TransactionAPI.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:endpoint>http://LAPTOP-2E7TFO4E:8088/mockTransactionAPISoap</con:endpoint></con:endpoints><con:operation id="77efa862-1e0c-436b-903e-61bc57fcdb6d" isOneWay="false" action="http://RPS.TransactionAPI/BalanceInquiry" name="BalanceInquiry" bindingOperationName="BalanceInquiry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="81d120cd-556e-4a0f-a8d7-17b2144fbb2e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:BalanceInquiry>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:mode>?</rps:mode>\r
+      </rps:BalanceInquiry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/BalanceInquiry"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="35f0a99a-5c1c-4b1c-a873-f3894998beac" isOneWay="false" action="http://RPS.TransactionAPI/ExpressTransaction" name="ExpressTransaction" bindingOperationName="ExpressTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="716e2ef4-4beb-45fb-be10-903395b499a9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:ExpressTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>IMTO</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>8E67CAC1BD118A37AB75B574B3099698DD318555</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:TxnType>C-MA</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>20200529212627664001</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>#20200529212627664001##MUHAMMAD##MUHAMMAD##1000##ABCD##00581630000049##4222-4559-5##abc karachi H.No 123 abc karachi##03001234567##abc@xyz.com##Beneficiary purpose##0991246666666666##H.No 123 abc karachi P.E.C.H.S##03001234567##abc@xyz.com##brother##ASSADD##Hill Park Branch##P.E.C.H.S, Shara-e-Faisal Branch P.E.C.H.S, Shara-e-Faisal Branch P.E.C.H.S#</rps:TxnRecord>\r
+         
+         <rps:TxnMode>0</rps:TxnMode>\r
+      </rps:ExpressTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/ExpressTransaction"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8203a072-6950-452d-b9dd-f244cb836f13" isOneWay="false" action="http://RPS.TransactionAPI/FetchAccountTitle" name="FetchAccountTitle" bindingOperationName="FetchAccountTitle" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ed5c1615-6c84-4198-a3a5-a1be9e9117ba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:FetchAccountTitle>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>IMTO</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>61DC63936CE637CF291FD6EF6E111260709C8D48</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:AccountNumber>03079770309</rps:AccountNumber>\r
+         <!--Optional:-->\r
+         <rps:BankCode>MMBL</rps:BankCode>\r
+         <!--Optional:-->\r
+         <rps:AgentID></rps:AgentID>\r
+         <!--Optional:-->\r
+         <rps:Amount>100</rps:Amount>\r
+      </rps:FetchAccountTitle>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/FetchAccountTitle"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3ac9d0fb-70df-49f7-a632-9962d516185d" isOneWay="false" action="http://RPS.TransactionAPI/ImportTransaction" name="ImportTransaction" bindingOperationName="ImportTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5fa3b6b6-cd8c-4419-ac95-7adeba88c2a9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:ImportTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:BatchId>?</rps:BatchId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>?</rps:TxnRecord>\r
+         <!--Optional:-->\r
+         <rps:RecordChecksum>?</rps:RecordChecksum>\r
+         <!--Optional:-->\r
+         <rps:FailureReason>?</rps:FailureReason>\r
+      </rps:ImportTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/ImportTransaction"/></con:call></con:operation><con:operation id="a6371054-355d-4bc2-a498-af68cc599a6a" isOneWay="false" action="http://RPS.TransactionAPI/ListBanks" name="ListBanks" bindingOperationName="ListBanks" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="111125be-a05c-44fc-8347-18112d356279" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:ListBanks>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <rps:Mode>?</rps:Mode>\r
+         <!--Optional:-->\r
+         <rps:AgentID>?</rps:AgentID>\r
+      </rps:ListBanks>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/ListBanks"/></con:call></con:operation><con:operation id="899c5186-7a78-4b65-85c2-9c5627bd542d" isOneWay="false" action="http://RPS.TransactionAPI/ProcessTransaction" name="ProcessTransaction" bindingOperationName="ProcessTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7be51fcf-7fbf-493d-b4c9-065ea65a4fb9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:ProcessTransaction>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>?</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>?</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:BatchId>?</rps:BatchId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>?</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>?</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnRecord>?</rps:TxnRecord>\r
+         <!--Optional:-->\r
+         <rps:RecordChecksum>?</rps:RecordChecksum>\r
+      </rps:ProcessTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/ProcessTransaction"/></con:call></con:operation><con:operation id="28f94521-0771-4770-aea2-95eea6938862" isOneWay="false" action="http://RPS.TransactionAPI/StatusInquiry" name="StatusInquiry" bindingOperationName="StatusInquiry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fc25d7c1-1704-4760-97fe-3ab16d0bee23" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.28.128.200/API/TransactionAPI.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rps:StatusInquiry>\r
+         <!--Optional:-->\r
+         <rps:ExchangeCompanyId>IMTO</rps:ExchangeCompanyId>\r
+         <!--Optional:-->\r
+         <rps:PasswordHash>8E67CAC1BD118A37AB75B574B3099698DD318555</rps:PasswordHash>\r
+         <!--Optional:-->\r
+         <rps:RecordUniqueId>20200529212627664001</rps:RecordUniqueId>\r
+         <!--Optional:-->\r
+         <rps:TxnType>C-MA</rps:TxnType>\r
+         <!--Optional:-->\r
+         <rps:AgentID></rps:AgentID>\r
+      </rps:StatusInquiry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/StatusInquiry"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="25f80f4f-fad3-4eeb-862c-6bf3d8ffc7ed" port="8088" path="/mockTransactionAPISoap" host="LAPTOP-2E7TFO4E" name="TransactionAPISoap MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="ExpressTransaction" id="4724d7af-2ad0-4932-bfee-afa8603cbdc0" interface="TransactionAPISoap" operation="ExpressTransaction"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="126c5e92-6f53-4005-bff7-01e4057c9d66" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rps="http://RPS.TransactionAPI/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rps:ExpressTransactionResponse>
+         <rps:ExpressTransactionResult>true</rps:ExpressTransactionResult>
+         <!--Optional:-->
+         <rps:FailureReason>Reason Unknown</rps:FailureReason>
+      </rps:ExpressTransactionResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://RPS.TransactionAPI/ExpressTransaction"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
